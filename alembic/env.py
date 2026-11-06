@@ -25,15 +25,6 @@ db_name = os.getenv("DB_NAME")
 if not all([db_user, db_password, db_name]):
     raise EnvironmentConfigurationError("CRITICAL: Missing required database environment variables.")
 
-# # 2. Construct the URL explicitly using SQLAlchemy's URL builder for the 'psycopg' (v3) driver
-# database_url = URL.create(
-#     drivername="postgresql+psycopg",
-#     username=db_user,
-#     password=db_password,
-#     host=db_host,
-#     port=int(db_port),
-#     database=db_name
-# )
 
 database_url = f"postgresql+psycopg://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 
