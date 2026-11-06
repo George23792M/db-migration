@@ -16,6 +16,7 @@ The Golden Rule of Immutability:
 2. Fix forward: If you need to fix a bug or change a table from a previous migration, generate a new migration file (alembic revision -m "fix_...") rather than editing an old one.
 
 Standard File Naming & Directory Structure:
+--------------------------------------------
 1. Maintain a strict, predictable layout so automation scripts and developers instantly know where files belong.
 
 Step-by-Step Workflow for New Migrations: 
